@@ -30,8 +30,8 @@
 }
 
 .card.red {
-    background: darkred;
-    color: darkred;;
+    background: crimson;
+    color: crimson;;
 }
 
 .card.blue {
@@ -69,7 +69,7 @@
     color:dodgerblue;
 }
 .control.red >* {
-    color:darkred;
+    color:crimson;
 }
 
 /* Hide the browser's default checkbox */
