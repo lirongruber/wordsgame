@@ -69,7 +69,7 @@ render_winner = function(winner, stop){
     winner_interval= setInterval(function(){ 
         $('.winning').removeClass('is-hidden')        
         $('.winning').solitaireVictory();
-    }, 100);
+    }, 1000);
     
 }
 
@@ -116,7 +116,9 @@ listener = function () {
         if   (winner_interval == "stopped"){
             return;
         }
-        
+        if ($("#is_manager").is(':checked')) {
+            return;
+        }
         if (first_team == $("#board .card."  + new_state["teams_order"][0]).length){
             //first_team winns
             console.log(teams_order[0] + " wins")
