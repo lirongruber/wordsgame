@@ -16,7 +16,9 @@
 </head>
 
 <body>
-<section class="control">
+<section class="control is-left">
+    <i class="winning fas fa-smile is-hidden"></i>
+        
     <label class="container">Manager
         <input id="is_manager" type="checkbox">
         <span class="checkmark"></span>
@@ -26,7 +28,13 @@
         <span class="first team"></span>
     </label>
 
+   
 </section>
+<section class="extra-control is-right">
+        <button id="new_game">Generate new game</button>
+</section>
+<div style="clear:both;"></div>
+
 <section id="board" class="boardgame">
     <div class="card card1">1</div>
     <div class="card card2">2</div>
@@ -55,6 +63,27 @@
     <div class="card card25">25</div>
 </section>
 </body>
+
+<script src="seedrandom.js"></script>
+<script>
+    let searchParams = new URLSearchParams(window.location.search)
+    if ((searchParams.has('gameId')) && (searchParams.get('gameId').length > 0)) { // true
+        gameId  = searchParams.get('gameId')
+    } else {
+        gameId = Math.random().toString(36).substring(2);
+        // var url = new URL(window.location);
+        searchParams.set("gameId", gameId); // setting your param
+        history.pushState(null, null, "?"+searchParams.toString());
+
+    }
+    Math.seedrandom(gameId);
+
+</script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
 <script src="logic.js"></script>
+<script src="animation.js"></script>
+
+
 
 </html>

@@ -6,6 +6,12 @@
     grid-auto-flow: dense;
 }
 
+.is-right {
+    float:right;
+    /*position: absolute;
+    right:0;
+    top:0;*/
+}
 .card {
     width: calc(100vw / 6);
     background: lightgray;
@@ -72,6 +78,32 @@
     color:crimson;
 }
 
+.is-hidden {
+    display: none !important;
+}
+.winning {
+    font-size: xx-large;
+    
+}
+.winning.blue {
+    color:dodgerblue;
+}
+.winning.red {
+    color:crimson;
+    
+}
+
+
+.is-left{
+    float: left;
+}
+.is-right {
+    float:right;
+}
+.extra-control >*{
+    color:black;
+    /* background: yellow; */
+}
 /* Hide the browser's default checkbox */
 .container input {
     position: absolute;
@@ -125,3 +157,4 @@
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+
